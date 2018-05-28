@@ -11,7 +11,7 @@
       }),
       $style01 = $('<link>', {
         rel: 'stylesheet',
-        href: 'https://rawgit.com/waganse/ui_components/master/css/reset.css'
+        href: ''
       }),
       $style02 = $('<link>', {
         rel: 'stylesheet',
