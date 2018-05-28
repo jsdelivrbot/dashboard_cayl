@@ -9,8 +9,7 @@
       width: 100%;
       height: 60px;
       line-height: 60px;
-      background: #f5f5f5;
-      border-bottom: 1px solid #A99A82;
+      background: #A99A82;
       -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
           box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
       z-index: 9999;
