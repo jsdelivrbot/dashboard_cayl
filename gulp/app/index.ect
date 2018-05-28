@@ -1,0 +1,89 @@
+<% extend '_layout.ect' %>
+
+<% block 'meta' : %>
+<meta charset="UTF-8">
+<title><%- @title %></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="description" content="<%- @description %>" />
+<meta name="keywords" content="<%- @keywords %>" />
+<% if @canonical : %>
+<link rel="canonical" href="<%- @canonical %>">
+<% end %>
+<% if @alternate : %>
+<link rel="alternate" href="<%- @alternate %>" >
+<% end %>
+
+<% if @ogTitle : %>
+<meta property="og:title" content="<%- @ogTitle %>">
+<% end %>
+<% if @ogType : %>
+<meta property="og:type" content="<%- @ogType %>">
+<% end %>
+<% if @ogDescription : %>
+<meta property="og:description" content="<%- @ogDescription %>">
+<% end %>
+<% if @ogUrl : %>
+<meta property="og:url" content="<%- @ogUrl %>">
+<% end %>
+<% if @ogImage : %>
+<meta property="og:image" content="<%- @ogImage %>">
+<% end %>
+<% if @ogSiteName : %>
+<meta property="og:site_name" content="<%- @ogSiteName %>">
+<% end %>
+<% if @ogEmail : %>
+<meta property="og:email" content="<%- @ogEmail %>">
+<% end %>
+
+<% if @fbAppId : %>
+<meta property="fb:app_id" content="<%- @fbAppId %>" />
+<% end %>
+<% if @twitterCard : %>
+<meta name="twitter:card" value="<%- @twitterCard %>"/>
+<% end %>
+<% if @twitterSiteId : %>
+<meta name="twitter:site:id" value="<%- @twitterSiteId %>"/>
+<% end %>
+
+<% end %>
+
+<% block 'main' : %>
+<main class="gulp-template main">
+
+<section class="gulp-template__section">
+  <h2>Page index</h2>
+  <p>Main pages</p>
+  <p><a href="main.html">Main</a></p>
+</section>
+
+<section class="gulp-template__section">
+  <h2>PNG Sprites</h2>
+  <div class="sprite sprite-logo"><img src="/img/t.png" alt=""></div>
+  <div class="sprite sprite-cog"><img src="/img/t.png" alt=""></div>
+  <div class="sprite sprite-leaf"><img src="/img/t.png" alt=""></div>
+  <div class="sprite sprite-trash"><img src="/img/t.png" alt=""></div>
+</section>
+
+<section class="gulp-template__section">
+  <h2>Web Fonts</h2>
+  <div class="icon icon-menu"></div>
+  <div class="icon icon-plus"></div>
+  <div class="icon icon-pencil"></div>
+  <div class="icon icon-trash"></div>
+  <div class="icon icon-download"></div>
+  <div class="icon icon-excel"></div>
+  <div class="icon icon-excel_upload"></div>
+</section>
+
+<section class="gulp-template__section">
+  <h2>SVG Sprites</h2>
+  <svg class="sprite-svg"><use xlink:href="#svg-logo1" /></svg>
+  <svg class="sprite-svg"><use xlink:href="#svg-logo2" /></svg>
+  <svg class="sprite-svg"><use xlink:href="#svg-logo3" /></svg>
+  <svg class="sprite-svg"><use xlink:href="#svg-icon1" /></svg>
+  <svg class="sprite-svg"><use xlink:href="#svg-icon2" /></svg>
+  <svg class="sprite-svg"><use xlink:href="#svg-icon3" /></svg>
+</section>
+
+</main>
+<% end %>

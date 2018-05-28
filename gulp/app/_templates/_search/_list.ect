@@ -1,0 +1,167 @@
+<div class="search-box js-search-box">
+    <div class="row">
+      <div class="col s2">
+        <label>arrivalDate</label>
+        <input type="date" id="datepicker1" name="arrival">
+      </div>
+      <div class="col s2">
+        <label>departureDate</label>
+        <input type="date" id="datepicker2" name="departure">
+      </div>
+      <div class="col s2">
+        <label>numberOfAdults</label>
+        <div class="select-wrapper">
+          <select class="initialized" name="adults">
+            <option value="{{ i }}" selected="">{{ i }}</option>
+            <option value="{{ i }}">{{ i }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col s2">
+        <label>numberOfChildren</label>
+        <div class="select-wrapper js-numchild">
+          <select class="initialized" name="children">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="col s2">
+        <label>childAges</label>
+        <p class="search-text js-numchild-text">Age:<span>3,5,6,8,9</span></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s2">
+        <label>locale</label>
+        <div class="select-wrapper">
+          <select class="initialized" name="locale">
+            <option value="en_US" selected="">English</option>
+            <option value="ar_SA">Arabic</option>
+            <option value="cs_CZ">Czech</option>
+            <option value="da_DK">Danish</option>
+            <option value="de_DE">German</option>
+            <option value="el_GR">Greek</option>
+            <option value="en_US" selected="">English</option>
+            <option value="ar_SA">Arabic</option>
+            <option value="cs_CZ">Czech</option>
+            <option value="da_DK">Danish</option>
+            <option value="de_DE">German</option>
+            <option value="el_GR">Greek</option>
+            <option value="es_ES">Spanish (Spain)</option>
+            <option value="es_MX">Spanish (Mexico)</option>
+            <option value="et_EE">Estonian</option>
+            <option value="fi_FI">Finnish</option>
+            <option value="fr_FR">French</option>
+            <option value="en_US" selected="">English</option>
+            <option value="ar_SA">Arabic</option>
+            <option value="cs_CZ">Czech</option>
+            <option value="da_DK">Danish</option>
+            <option value="de_DE">German</option>
+            <option value="el_GR">Greek</option>
+            <option value="es_ES">Spanish (Spain)</option>
+            <option value="es_MX">Spanish (Mexico)</option>
+            <option value="et_EE">Estonian</option>
+            <option value="fi_FI">Finnish</option>
+            <option value="fr_FR">French</option>
+            <option value="fr_CA">French (Canada)</option>
+            <option value="hu_HU">Hungarian</option>
+            <option value="hr_HR">Croatian</option>
+            <option value="in_ID">Indonesian</option>
+            <option value="is_IS">Icelandic</option>
+            <option value="it_IT">Italian</option>
+            <option value="ja_JP">Japanese</option>
+            <option value="ko_KR">Korean</option>
+            <option value="ms_MY">Malay</option>
+            <option value="lv_LV">Latvian</option>
+            <option value="lt_LT">Lithuanian</option>
+            <option value="nl_NL">Dutch</option>
+            <option value="no_NO">Norwegian</option>
+            <option value="pl_PL">Polish</option>
+            <option value="pt_BR">Portugues (Brazil)</option>
+            <option value="pt_PT">Portugues (Portugal)</option>
+            <option value="ru_RU">Russian</option>
+            <option value="sv_SE">Swedish</option>
+            <option value="sk_SK">Slovak</option>
+            <option value="th_TH">Thai</option>
+            <option value="tr_TR">Turkish</option>
+            <option value="uk_UA">Ukranian</option>
+            <option value="vi_VN">Vietnamese</option>
+            <option value="zh_TW">Traditional Chinese</option>
+            <option value="zh_CN">Simplified Chinese</option>
+          </select>
+        </div>
+      </div>
+      <div class="col s2">
+        <label>currency</label>
+        <div class="select-wrapper">
+          <select class="initialized" name="currency">
+            <option value="{{ item.currency_id }}" selected="">{{ item.name_en }}</option>
+            <option value="{{ item.currency_id }}" selected="">{{ item.name_en }}</option>
+            <option value="{{ item.currency_id }}">{{ item.name_en }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col s2">
+        <label>rate (maxRate & minRate)</label>
+        <div id="rate"></div>
+        <div class="rate-container">
+          <span class="minrate">3.0</span> - <span class="maxrate">5.0</span>
+        </div>
+        <input type="hidden" value="3.0" name="minrate">
+        <input type="hidden" value="5.0" name="maxrate">
+      </div>
+      <div class="col s2">
+        <label>numberOfResults</label>
+        <div class="select-wrapper">
+          <select class="initialized" name="numresult">
+            <option value="{{ num }}" selected="">{{ num }}</option>
+            <option value="{{ num }}">{{ num }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col s3">
+        <label>apiExperience</label>
+        <div class="select-wrapper">
+          <select class="initialized" name="experience">
+            <option value="PARTNER_CALL_CENTER" selected="">PARTNER_CALL_CENTER</option>
+            <option value="PARTNER_WEBSITE">PARTNER_WEBSITE</option>
+            <option value="PARTNER_MOBILE_WEB">PARTNER_MOBILE_WEB</option>
+            <option value="PARTNER_MOBILE_APP">PARTNER_MOBILE_APP</option>
+            <option value="PARTNER_BOT_CACHE">PARTNER_BOT_CACHE</option>
+            <option value="PARTNER_BOT_REPORTING">PARTNER_BOT_REPORTING</option>
+            <option value="PARTNER_AFFILIATE">PARTNER_AFFILIATE</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <a class="btn-floating">
+      <i class="large material-icons">search</i>
+    </a>
+
+    <a href="#modal1" class="js-childmodal-trigger"></a>
+    <input type="hidden" name="childAges" class="js-childages">
+
+    <div id="modal1" class="modal js-childage-modal">
+      <div class="modal-content">
+        <h4 class="modal__title">Age of Children</h4>
+        <div class="number-box js-childage-elm">
+          <div class="row">
+            <div class="col s2">
+              <label>Child 1</label>
+              <input type="number" name="child1" min="0" max="12" class="center-align">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+  </div>

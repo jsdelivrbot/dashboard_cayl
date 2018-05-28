@@ -1,0 +1,36 @@
+{
+  "name": "template_gulp",
+  "version": "0.0.0",
+  "authors": [
+    "Yossy"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.1",
+    "jquery": "~1.11.3",
+    "raty": "^2.7.0",
+    "clipboard": "^1.5.12",
+    "frosty": "*"
+  },
+  "devDependencies": {
+    "modernizr": "~2.8.3"
+  },
+  "overrides": {
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    }
+  }
+}
