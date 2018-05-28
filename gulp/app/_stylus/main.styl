@@ -1,20 +1,11 @@
-@import "nib"
-global-reset()
-
-@import "_var"
 @import "_icon"
 @import "_sprite"
 @import "_header"
-@import "_menu"
-@import "_footer"
 @import "_background"
 @import "_main"
-@import "_search"
-@import "_loader"
 
 body
   font-family Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif
-  color base_text_color
   background url(/img/bg.png) repeat 0 0
 
 img
@@ -40,32 +31,7 @@ img
 		.icon
 			&::before
 				font-size 100px
-				color #444
 
 		.sprite-svg
 			width 100px
 			height 100px
-			fill #444
-
-#content
-	padding 60px 10px
-
-
-// Search
-.select-wrapper input.select-dropdown,
-input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea
-	height 2rem
-
-.select-wrapper input.select-dropdown
-	line-height 2rem
-
-.dropdown-content li
-	line-height auto
-	min-height auto
-
-.dropdown-content li > a, .dropdown-content li > span
-	line-height auto
-	padding 10px
-
-label
-	font-size .8rem
