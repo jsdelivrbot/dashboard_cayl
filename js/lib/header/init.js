@@ -1,7 +1,7 @@
 (function() {
   var cssText = `
     #page #content #pageData {
-      padding-top: 65px !important;
+      padding-top: 70px !important;
     }
     #page #custom-dom-header {
       position: fixed;
@@ -10,7 +10,7 @@
       height: 60px;
       line-height: 60px;
       background: #fff;
-      border-bottom: 1px solid #A99A82;
+      border-bottom: 2px solid #A99A82;
       -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
           box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
       z-index: 9999;
