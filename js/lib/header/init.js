@@ -9,7 +9,7 @@
       width: 100%;
       height: 60px;
       line-height: 60px;
-      background: url(https://cdn.rawgit.com/waganse/src_bank/50b2df10/img/bg_white_transparent70.png) repeat;
+      background: url(https://cdn.rawgit.com/waganse/dashboard_cayl/ca139427/img/bg_white_transparent70.png) repeat;
       -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
           box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
       z-index: 9999;
@@ -37,13 +37,13 @@
               transform-origin: right top;
     }
     #page #custom-dom-header .sprite-logo {
-      background-image: url("/img/sprite.png");
+      background-image: url("https://cdn.rawgit.com/waganse/dashboard_cayl/ca139427/img/sprite.png");
       background-position: 0px 0px;
       width: 197px;
       height: 73px;
     }
     #page #custom-dom-header .sprite-icon_top {
-      background-image: url("/img/sprite.png");
+      background-image: url("https://cdn.rawgit.com/waganse/dashboard_cayl/ca139427/img/sprite.png");
       background-position: 0px -73px;
       width: 83px;
       height: 83px;
