@@ -8,6 +8,10 @@
     padding: 20px
 }
 
+#page #content #pageData .new-dashboard.grid-wrapper .widget-item .new-widget {
+    border-radius: 12px;
+}
+
 @font-face {
     font-family: icomoon;
     src: url(https://rawgit.com/waganse/src_bank/master/fonts/fonts/icomoon.eot?w30bcr);
