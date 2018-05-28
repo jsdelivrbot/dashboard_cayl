@@ -9,7 +9,7 @@
       width: 100%;
       height: 60px;
       line-height: 60px;
-      background: #fff;
+      background: url(https://cdn.rawgit.com/waganse/dashboard_cayl/5a064c3b/img/bg_white_transparent70.png);
       border-bottom: 2px solid #A99A82;
       -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
           box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
