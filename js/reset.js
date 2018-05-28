@@ -6,7 +6,6 @@
   var svgPath = 'https://cdn.rawgit.com/waganse/src_bank/50b2df10/svg/cayl/svg-symbols.svg',
       $parentBody = $('body', parent.document),
       $parentNode = $('#pageData', parent.document),
-      $iframes = $parentNode.find('iframe'),
       $customNode = $('<div>', {
         id: 'custom-dom'
       }),
@@ -21,10 +20,7 @@
 
   // SVG
   $.get(svgPath, function(data) {
-    var str = new XMLSerializer().serializeToString(data.documentElement);
-
-    $parentBody.prepend(str);
-    $iframes.contents().find('body').prepend(str);
+    $parentBody.prepend(new XMLSerializer().serializeToString(data.documentElement));
   });
 
   // Custom DOM
@@ -35,7 +31,5 @@
   $style01.html(cssText);
   $parentNode.append($style01);
   $parentNode.append($style02);
-
-  $iframes.contents().find('.section-title').prepend('<svg></svg>');
 
 })();
