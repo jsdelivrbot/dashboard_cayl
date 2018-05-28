@@ -5,6 +5,6 @@
         $customNode = $pageNode.find('#custom-dom-header');
 
     // Render header
-    $customNode.append(tpl.menuContainer());
+    $customNode.append(tpl());
 
 })();
