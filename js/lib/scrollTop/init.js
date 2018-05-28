@@ -6,8 +6,7 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #272a46;
-      border-radius: 50%;
+      background: url(https://cdn.rawgit.com/waganse/dashboard_cayl/81109573/img/icon_top.png);
       z-index: 9999;
       transform: translateY(150%);
       transition: all .5s;
@@ -18,21 +17,6 @@
     }
     #pageData #custom-dom-scrolltop.active {
       transform: translateY(0);
-    }
-    #pageData.cog-mode #custom-dom-scrolltop {
-      display: none;
-    }
-    #pageData #custom-dom-scrolltop .scroll-top {
-      width: 60px;
-      height: 60px;
-      position: relative;
-    }
-    #pageData #custom-dom-scrolltop .scroll-top svg {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      width: 50px;
-      fill: #f7f7f7;
     }
   `,
   customCssText = window.css || '',
