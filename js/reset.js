@@ -13,10 +13,10 @@
         rel: 'stylesheet',
         href: 'https://cdn.rawgit.com/waganse/dashboard_cayl/11422c7/css/reset.css'
       }),
-      $style02 = $('<link>', {
-        rel: 'stylesheet',
-        href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
-      });
+      // $style02 = $('<link>', {
+      //   rel: 'stylesheet',
+      //   href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+      // });
 
   // Init
   $parentBody.find('#custom-dom').remove();
@@ -35,7 +35,7 @@
   // CSS insert
   $style01.html(cssText);
   $parentNode.append($style01);
-  $parentNode.append($style02);
+  // $parentNode.append($style02);
 
   $customNode.find('.js-overlay').on('click', function() {
     $parentNode.removeClass('config');
