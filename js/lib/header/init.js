@@ -15,6 +15,10 @@
           box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
       z-index: 9999;
     }
+    #page #custom-dom-header {
+      height: 30px;
+      line-height: 30px;
+    }
     #page #custom-dom-header .header .brand-logo {
       position: absolute;
       top: 50%;
@@ -25,6 +29,7 @@
       -webkit-transform-origin: left top;
           -ms-transform-origin: left top;
               transform-origin: left top;
+      transition: all .4s;
     }
     #page #custom-dom-header.active .header .brand-logo {
       -webkit-transform: scale(0.2) translateX(0);
