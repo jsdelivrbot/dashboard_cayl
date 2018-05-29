@@ -26,10 +26,20 @@
           -ms-transform-origin: left top;
               transform-origin: left top;
     }
+    #page #custom-dom-header.active .header .brand-logo {
+      -webkit-transform: scale(0.2) translateX(0);
+          -ms-transform: scale(0.2) translateX(0);
+              transform: scale(0.2) translateX(0);
+      left: 20px;
+    }
     #page #custom-dom-header .header .sprite-logo {
       position: absolute;
       top: 50%;
       right: 20px;
+      background-image: url("https://cdn.rawgit.com/waganse/dashboard_cayl/ca139427/img/sprite.png");
+      background-position: 0px 0px;
+      width: 197px;
+      height: 73px;
       -webkit-transform: scale(0.4) translateY(-50%);
           -ms-transform: scale(0.4) translateY(-50%);
               transform: scale(0.4) translateY(-50%);
@@ -37,11 +47,10 @@
           -ms-transform-origin: right top;
               transform-origin: right top;
     }
-    #page #custom-dom-header .sprite-logo {
-      background-image: url("https://cdn.rawgit.com/waganse/dashboard_cayl/ca139427/img/sprite.png");
-      background-position: 0px 0px;
-      width: 197px;
-      height: 73px;
+    #page #custom-dom-header.active .header .sprite-logo {
+      -webkit-transform: scale(0.3) translateY(-50%);
+          -ms-transform: scale(0.3) translateY(-50%);
+              transform: scale(0.3) translateY(-50%);
     }
     #page #custom-dom-header .sprite-icon_top {
       background-image: url("https://cdn.rawgit.com/waganse/dashboard_cayl/ca139427/img/sprite.png");
