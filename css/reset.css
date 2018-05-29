@@ -51,7 +51,8 @@
 }
 
 #page #content #pageData #custom-dom .custom__overlay svg {
-  width: 150px;
+  width: 230px;
+  height: 230px;
   opacity: .4;
   position: fixed;
   right: 50px;
