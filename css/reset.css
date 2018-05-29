@@ -2,8 +2,9 @@
     padding: 0;
     margin: 0;
     background: url(https://cdn.rawgit.com/waganse/dashboard_cayl/7e6fb6c6/img/icon2.svg), url(https://cdn.rawgit.com/waganse/dashboard_cayl/5ea7e881/img/bg_2.png);
-    background-repeat: repeat, no-repeat;
-    background-position: top left, 95% 95%;
+    background-repeat: no-repeat, repeat;
+    background-position: right 30px bottom 30px, left top;
+    background-size: 400px,auto;
 }
 
 #page #content #pageData .new-dashboard.grid-wrapper {
