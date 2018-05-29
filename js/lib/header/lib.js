@@ -7,4 +7,16 @@
     // Render header
     $customNode.append(tpl());
 
+    // Scroll event
+    $pageNode.on('scroll', function() {
+        var y = $pageNode.scrollTop();
+
+        if (y > 30) {
+            $customNode.addClass('active');
+        } else {
+            $customNode.removeClass('active');
+        }
+    });
+
+
 })();
