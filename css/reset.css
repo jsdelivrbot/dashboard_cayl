@@ -22,6 +22,17 @@
     width: 100vw;
 }
 
+#page #content #pageData.config .new-dashboard.grid-wrapper .widget-item:first-child {
+    display: block;
+    width: 30vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
 @font-face {
     font-family: icomoon;
     src: url(https://rawgit.com/waganse/src_bank/master/fonts/fonts/icomoon.eot?w30bcr);
