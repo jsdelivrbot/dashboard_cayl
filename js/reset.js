@@ -23,13 +23,17 @@
     $parentBody.prepend(new XMLSerializer().serializeToString(data.documentElement));
   });
 
-  // Custom DOM
-  // $parentNode.append($customNode);
-  // $customNode.append('<div class="custom-menu__cog"><a href="#" class="js-switch-cog"><i class="icon-edit"></i></a></div>');
+  Custom DOM
+  $parentNode.append($customNode);
+  $customNode.append('<div class="custom-menu__cog"><div class="custom__overlay js-overlay"></div></div>');
 
   // CSS insert
   $style01.html(cssText);
   $parentNode.append($style01);
   $parentNode.append($style02);
+
+  $customNode.find('.js-overlay').on('click', function() {
+    $parentNode.removeClass('config');
+  });
 
 })();
