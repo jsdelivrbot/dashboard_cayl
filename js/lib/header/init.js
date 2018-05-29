@@ -76,7 +76,7 @@
   });
 
   // Init
-  $parentBody.find('#custom-dom-header').remove();
+  $parentNode.find('#custom-dom-scrolltop').remove();
 
   // Override styling
   cssText += customCssText;

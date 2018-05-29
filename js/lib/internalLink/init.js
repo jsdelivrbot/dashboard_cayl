@@ -39,6 +39,9 @@
     type: 'text/css'
   });
 
+  // Init
+  $parentNode.find('#custom-dom-internallink').remove();
+
   // Override styling
   cssText += customCssText;
 

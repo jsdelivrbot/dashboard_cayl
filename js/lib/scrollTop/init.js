@@ -34,7 +34,7 @@
   });
 
   // Init
-  $parentBody.find('#custom-dom-scrolltop').remove();
+  $parentNode.find('#custom-dom-scrolltop').remove();
 
   // Override styling
   cssText += customCssText;
