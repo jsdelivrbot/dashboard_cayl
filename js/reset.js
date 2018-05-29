@@ -23,9 +23,9 @@
     $parentBody.prepend(new XMLSerializer().serializeToString(data.documentElement));
   });
 
-  // Custom DOM
-  // $parentNode.append($customNode);
-  // $customNode.append('<div class="custom-menu__cog"><a href="#" class="js-switch-cog"><span class="glyphicon glyphicon-cog"></span></a></div>');
+  Custom DOM
+  $parentNode.append($customNode);
+  $customNode.append('<div class="custom-menu__cog"><a href="#" class="js-switch-cog"><span class="icon-edit"></span></a></div>');
 
   // CSS insert
   $style01.html(cssText);
