@@ -51,6 +51,7 @@
       -webkit-transform-origin: right top;
           -ms-transform-origin: right top;
               transform-origin: right top;
+      transition: all .4s;
     }
     #page #custom-dom-header.active .header .sprite-logo {
       -webkit-transform: scale(0.3) translateY(-50%);
