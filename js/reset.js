@@ -30,7 +30,7 @@
   $parentNode.append($customNode);
 
   // Overlay
-  $customNode.append('<div class="custom__overlay js-overlay"><svg class="brand-logo"><use xlink:href="#svg-icon2" /></svg></div>');
+  $customNode.append('<div class="custom__overlay js-overlay"></div>');
 
   // CSS insert
   $style01.html(cssText);
