@@ -25,7 +25,10 @@
 
   // Custom DOM
   $parentNode.append($customNode);
-  $customNode.append('<div class="custom-menu__cog"><div class="custom__overlay js-overlay"><svg class="brand-logo"><use xlink:href="#svg-icon2" /></svg></div></div>');
+  // Overlay
+  $customNode.append('<div class="custom__overlay js-overlay"><svg class="brand-logo"><use xlink:href="#svg-icon2" /></svg></div>');
+  // Icon
+  $customNode.append('<div class="custom__bg"><svg class="brand-logo"><use xlink:href="#svg-icon2" /></svg></div>');
 
   // CSS insert
   $style01.html(cssText);
