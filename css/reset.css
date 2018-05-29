@@ -22,14 +22,6 @@
     width: 100vw;
 }
 
-#page #content #pageData .custom-menu__cog {
-    position: fixed;
-    top: 90px;
-    right: 30px;
-    color: #ccc;
-}
-
-
 @font-face {
     font-family: icomoon;
     src: url(https://rawgit.com/waganse/src_bank/master/fonts/fonts/icomoon.eot?w30bcr);

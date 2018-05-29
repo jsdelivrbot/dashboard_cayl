@@ -24,8 +24,8 @@
   });
 
   // Custom DOM
-  $parentNode.append($customNode);
-  $customNode.append('<div class="custom-menu__cog"><a href="#" class="js-switch-cog"><span class="icon-edit"></span></a></div>');
+  // $parentNode.append($customNode);
+  // $customNode.append('<div class="custom-menu__cog"><a href="#" class="js-switch-cog"><i class="icon-edit"></i></a></div>');
 
   // CSS insert
   $style01.html(cssText);
