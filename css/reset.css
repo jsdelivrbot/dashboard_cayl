@@ -17,7 +17,7 @@
     word-wrap: break-word;
 }
 
-#page #content #pageData .new-dashboard.grid-wrapper .widget-item:last-child {
+#page #content #pageData .new-dashboard.grid-wrapper .widget-item:first-child {
     display: none;
     width: 100vw;
 }
