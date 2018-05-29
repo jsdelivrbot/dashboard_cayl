@@ -4,7 +4,7 @@
         $pageNode = $('#pageData', parent.document),
         $widgets = $pageNode.find('.widget-item'),
         $titles = $widgets.find('.new-widget-title').find('.left-part'),
-        iconClass = window.iconClass && window.iconClass != '' ? window.iconClass : 'icon-circle-thin',
+        iconClass = window.iconClass && window.iconClass != '' ? window.iconClass : 'dicon-spinner10',
         $icon = $('<i>', {
         	class: iconClass
         });
