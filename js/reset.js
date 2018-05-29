@@ -18,6 +18,9 @@
         href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
       });
 
+  // Init
+  $parentBody.find('#custom-dom').remove();
+
   // SVG
   $.get(svgPath, function(data) {
     $parentBody.prepend(new XMLSerializer().serializeToString(data.documentElement));

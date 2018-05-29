@@ -75,6 +75,9 @@
     type: 'text/css'
   });
 
+  // Init
+  $parentBody.find('#custom-dom-header').remove();
+
   // Override styling
   cssText += customCssText;
 

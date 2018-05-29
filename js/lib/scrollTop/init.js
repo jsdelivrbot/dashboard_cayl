@@ -33,6 +33,9 @@
     type: 'text/css'
   });
 
+  // Init
+  $parentBody.find('#custom-dom-scrolltop').remove();
+
   // Override styling
   cssText += customCssText;
 
