@@ -11,7 +11,7 @@
       }),
       $style01 = $('<link>', {
         rel: 'stylesheet',
-        href: 'https://cdn.rawgit.com/waganse/dashboard_cayl/458204f/css/reset.css'
+        href: 'https://cdn.rawgit.com/waganse/dashboard_cayl/11422c7/css/reset.css'
       }),
       $style02 = $('<link>', {
         rel: 'stylesheet',
