@@ -43,7 +43,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgb(30, 30, 30, 0.3);
+  background: rgb(30, 30, 30, 0.2);
+  z-index: 9998;
 }
 #page #content #pageData.config #custom-dom .custom__overlay {
   display: block;
