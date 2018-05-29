@@ -12,7 +12,7 @@
       $style01 = $('<link>', {
         rel: 'stylesheet',
         href: 'https://cdn.rawgit.com/waganse/dashboard_cayl/11422c7/css/reset.css'
-      }),
+      });
       // $style02 = $('<link>', {
       //   rel: 'stylesheet',
       //   href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
