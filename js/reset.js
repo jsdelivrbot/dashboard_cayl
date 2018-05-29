@@ -23,7 +23,7 @@
     $parentBody.prepend(new XMLSerializer().serializeToString(data.documentElement));
   });
 
-  Custom DOM
+  // Custom DOM
   $parentNode.append($customNode);
   $customNode.append('<div class="custom-menu__cog"><a href="#" class="js-switch-cog"><span class="icon-edit"></span></a></div>');
 
