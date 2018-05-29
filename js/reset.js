@@ -23,7 +23,7 @@
     $parentBody.prepend(new XMLSerializer().serializeToString(data.documentElement));
   });
 
-  Custom DOM
+  // Custom DOM
   $parentNode.append($customNode);
   $customNode.append('<div class="custom-menu__cog"><div class="custom__overlay js-overlay"></div></div>');
 
