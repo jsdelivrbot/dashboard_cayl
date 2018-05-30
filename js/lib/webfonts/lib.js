@@ -11,10 +11,10 @@
 
     $.each($titles, function() {
         $this = $(this),
-        $title = $.trim($this.find('.title-label').text());
+        title = $.trim($this.find('.title-label').text());
 
-console.log($this, $title);
-        if ($title != '') {
+        if (title != '') {
+console.log($this, title);
             $this.find('i').remove();
             $this.prepend($icon);
         }
