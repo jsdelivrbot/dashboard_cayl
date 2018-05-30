@@ -22,7 +22,6 @@
 
 #page #content #pageData .new-dashboard.grid-wrapper .widget-item:first-child {
     display: none;
-    width: 100vw;
 }
 
 #page #content #pageData.config .new-dashboard.grid-wrapper .widget-item:first-child {

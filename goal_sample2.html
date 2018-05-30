@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//cdn.rawgit.com/waganse/src_bank/c7e97552/js/d3/liquidFillGauge.js"></script>
+    <style>
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="results" style="text-align: center; margin-bottom: 20px;"><span style="font-size: 20pt;"><span style="color: #ffffff; background-color: #808080; font-size: 12pt;"><br />&nbsp;{Query.Quarter}&nbsp;</span><br />&yen;{Query.売上.}&nbsp;</span><br /><span style="color: #000000;">(目標:</span><span style="font-size: 15pt; color: #000000;">&nbsp;&yen;{Query.月別売上目標金額})&nbsp;</span></div>
+<svg id="fillgauge" width="100%"></svg>
+<script>// <![CDATA[
+var val = Number({Query.JSON}.rows[0][3]) || 0;
+var dispVal = val.toFixed(1);
+var dispColor = '#669317'; // Green
+
+if (dispVal < 60) {
+    dispColor = '#C0332E'; // Red
+} else if(60 <= dispVal && dispVal <= 95) {
+    dispColor = '#ffb738'; // Yellow
+}
+
+var config = liquidFillGaugeDefaultSettings();
+    config.circleThickness = 0.15;
+    config.circleColor = dispColor;
+    config.textColor = dispColor;
+    config.waveTextColor = dispColor;
+    config.waveColor = '#b2f6ff';
+    config.textVertPosition = 0.8;
+    config.waveAnimateTime = 1000;
+    config.waveHeight = 0.05;
+    config.waveAnimate = true;
+    config.waveRise = false;
+    config.waveHeightScaling = false;
+    config.waveOffset = 0.25;
+    config.textSize = 0.75;
+    config.waveCount = 3;
+
+    loadLiquidFillGauge("fillgauge", dispVal, config);
+// ]]></script>
+</body>
+</html>

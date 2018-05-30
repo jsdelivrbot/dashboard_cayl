@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <style type="text/css">
+        .results {
+          position: relative;
+          font-family: 'Arial';
+        }
+        body {
+          overflow:hidden;
+        }
+        .chart-gauge {
+          margin: auto;
+          position: relative;
+        }
+        .chart-first {
+          fill: #eb5858;
+        }
+        .chart-second {
+          fill: rgb(255, 191, 64);
+        }
+        .chart-third {
+          fill: #91C553;
+        }
+        .chart-fourth {
+          fill: rgb(255, 191, 64);
+        }
+        .chart-fifth {
+          fill: #91C553;
+        }
+        .needle, .needle-center {
+          fill: #414141;
+        }
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <br>
+    <div class="results" style="text-align: center;"><span style="font-size: 20pt;"><span style="color: #ffffff; background-color: #808080; font-size: 12pt;">&nbsp;{Query.Quarter}&nbsp;</span><br />&yen;{Query.売上.}&nbsp;</span><br /><span id="percent" style="font-size: 15pt; color: #808080;"><span style="color: #000000;">達成率:</span> {Query.売上達成率}% <br /><span style="color: #000000;">(目標:</span></span><span style="font-size: 15pt; color: #000000;">&nbsp;&yen;{Query.月別売上目標金額})&nbsp;</span></div>
+    <div class="chart-gauge"></div>
+    <script>
+// data which need to be fetched
+      var value = parseInt({Query.JSON}.rows[0][3]);
+
+      if(value < 85) {
+        document.querySelector('#percent').style.color = '#eb5858';
+      } else if(value >= 85 && value < 95) {
+        document.querySelector('#percent').style.color = 'rgb(255, 191, 64)';
+      } else if (value => 95 && value <= 100) {
+        document.querySelector('#percent').style.color = '#91C553';
+      // } else if (value  > 102 && value < 100) {
+//            document.querySelector('#percent').style.color = 'rgb(255, 191, 64)';
+      // } else {
+      }
+
+      var gaugeMaxValue = 100;
+
+      // calculate perecentage
+      var percentValue = value / gaugeMaxValue;
+
+      ////////////////////////
+      var needleClient;
+
+      (function(){
+
+        var barWidth, chart, chartInset, degToRad, repaintGauge,
+            height, margin, numSections, padRad, percToDeg, percToRad,
+            percent, radius, sectionIndx, svg, totalPercent, width;
+
+        percent = percentValue;
+
+        numSections = 1;
+        sectionPerc = 1 / numSections / 2;
+        padRad = 0.025;
+        chartInset = 10;
+
+        // Orientation of gauge:
+        totalPercent = .75;
+
+        el = d3.select('.chart-gauge');
+
+        margin = {
+          top: 100,
+          right: 20,
+          bottom: 30,
+          left: 20
+        };
+
+        width = el[0][0].offsetWidth - margin.left - margin.right;
+        height = width + 80;
+        radius = Math.min(width, height) / 2;
+        barWidth = 40 * width / 300;
+
+        //Utility methods
+        percToDeg = function(perc) {
+          return perc * 360;
+        };
+
+        percToRad = function(perc) {
+          return degToRad(percToDeg(perc));
+        };
+
+        degToRad = function(deg) {
+          return deg * Math.PI / 180;
+        };
+
+        // Create SVG element
+        svg = el.append('svg');
+        //svg = el.append('svg').attr('width', width + margin.left + margin.right).attr('height', height);
+
+        // Add layer for the panel
+        chart = svg.append('g').attr('transform', "translate(" + ((width + margin.left) / 2) + ", " + ((height + margin.top) / 3) + ")");
+        //chart = svg.append('g').attr('transform', "translate(" + ((width + margin.left) / 2) + ", " + ((height + margin.top) / 3) + ")");
+
+        chart.append('path').attr('class', "arc chart-first");
+        chart.append('path').attr('class', "arc chart-second");
+        chart.append('path').attr('class', "arc chart-third");
+        // chart.append('path').attr('class', "arc chart-fourth");
+        // chart.append('path').attr('class', "arc chart-fifth");
+
+        // arc5 = d3.svg.arc().outerRadius(radius - chartInset).innerRadius(radius - chartInset - barWidth)
+        // arc4 = d3.svg.arc().outerRadius(radius - chartInset).innerRadius(radius - chartInset - barWidth)
+        arc1 = d3.svg.arc().outerRadius(radius - chartInset).innerRadius(radius - chartInset - barWidth)
+        arc2 = d3.svg.arc().outerRadius(radius - chartInset).innerRadius(radius - chartInset - barWidth)
+        arc3 = d3.svg.arc().outerRadius(radius - chartInset).innerRadius(radius - chartInset - barWidth)
+
+        repaintGauge = function () {
+          perc = 0.5;
+
+          var next_start = totalPercent;
+
+          arcStartRad = percToRad(next_start);
+          arcEndRad = arcStartRad + percToRad(perc * (85 / 100));
+          next_start += perc * (85 / 100);
+
+          arc1.startAngle(arcStartRad).endAngle(arcEndRad);
+
+          arcStartRad = percToRad(next_start);
+          arcEndRad = arcStartRad + percToRad(perc * (10 / 100));
+          next_start += perc * (10 / 100);
+
+          arc2.startAngle(arcStartRad + padRad).endAngle(arcEndRad);
+
+          arcStartRad = percToRad(next_start);
+          arcEndRad = arcStartRad + percToRad(perc * (5 / 100));
+          next_start += perc * (5 / 100);
+
+          arc3.startAngle(arcStartRad + padRad).endAngle(arcEndRad);
+
+          // arcStartRad = percToRad(next_start);
+          // arcEndRad = arcStartRad + percToRad(perc * (8 / 100));
+          // next_start += perc * (8 / 100);
+
+          // arc4.startAngle(arcStartRad + padRad).endAngle(arcEndRad);
+
+          // arcStartRad = percToRad(next_start);
+          // arcEndRad = arcStartRad + percToRad(perc * (40 / 100));
+
+          // arc5.startAngle(arcStartRad + padRad).endAngle(arcEndRad);
+
+          chart.select(".chart-first").attr('d', arc1);
+          chart.select(".chart-second").attr('d', arc2);
+          chart.select(".chart-third").attr('d', arc3);
+          // chart.select(".chart-fourth").attr('d', arc4);
+          // chart.select(".chart-fifth").attr('d', arc5);
+        }
+
+        var dataset = [{metric:name, value: value}]
+        var trX = 180 - 210 * Math.cos(percToRad(percent / 2));
+        var trY = 195 - 210 * Math.sin(percToRad(percent / 2));
+
+        displayValue = function() {
+          texts.append("text")
+            .text(function(){
+                  return dataset[0].value;
+            })
+            .attr('id', "Value")
+            .attr('transform', "translate(" + trX + ", " + trY+ ")")
+            .attr("font-size",18)
+            .style("fill", '#000000');
+        }
+
+        var Needle = (function() {
+          //Helper function that returns the `d` value for moving the needle
+          var recalcPointerPos = function(perc) {
+            var centerX, centerY, leftX, leftY, rightX, rightY, thetaRad, topX, topY;
+            thetaRad = percToRad(perc / 2);
+            centerX = 0;
+            centerY = 0;
+            topX = centerX - this.len * Math.cos(thetaRad);
+            topY = centerY - this.len * Math.sin(thetaRad);
+            leftX = centerX - this.radius * Math.cos(thetaRad - Math.PI / 2);
+            leftY = centerY - this.radius * Math.sin(thetaRad - Math.PI / 2);
+            rightX = centerX - this.radius * Math.cos(thetaRad + Math.PI / 2);
+            rightY = centerY - this.radius * Math.sin(thetaRad + Math.PI / 2);
+
+            return "M " + leftX + " " + leftY + " L " + topX + " " + topY + " L " + rightX + " " + rightY;
+          };
+
+          function Needle(el) {
+            this.el = el;
+            this.len = width / 2.5;
+            this.radius = this.len / 8;
+          }
+
+          Needle.prototype.render = function() {
+            this.el.append('circle').attr('class', 'needle-center').attr('cx', 0).attr('cy', 0).attr('r', this.radius);
+
+            return this.el.append('path').attr('class', 'needle').attr('id', 'client-needle').attr('d', recalcPointerPos.call(this, 0));
+          };
+
+          Needle.prototype.moveTo = function(perc) {
+            var self,
+                oldValue = this.perc || 0;
+
+            this.perc = perc;
+            self = this;
+
+            // Reset pointer position
+            this.el.transition().delay(100).ease('quad').duration(200).select('.needle').tween('reset-progress', function() {
+              return function(percentOfPercent) {
+                var progress = (1 - percentOfPercent) * oldValue;
+                repaintGauge(progress);
+                return d3.select(this).attr('d', recalcPointerPos.call(self, progress));
+              };
+            });
+
+            this.el.transition().delay(300).ease('bounce').duration(1500).select('.needle').tween('progress', function() {
+              return function(percentOfPercent) {
+                var progress = percentOfPercent * perc;
+
+                repaintGauge(progress);
+                return d3.select(this).attr('d', recalcPointerPos.call(self, progress));
+              };
+            });
+          };
+
+          return Needle;
+        })();
+
+        needle = new Needle(chart);
+        needle.render();
+        needle.moveTo(percent);
+
+      })();
+</script>
+</body>
+
+</html>
