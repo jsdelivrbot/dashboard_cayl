@@ -13,7 +13,6 @@
             title = $.trim($this.find('.title-label').text());
 
         if (title != '') {
-            console.log($this);
             $this.prepend('<i class="dicon ' + iconClass + '"></i>');
         }
     });
