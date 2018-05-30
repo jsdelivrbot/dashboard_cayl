@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <script src="//d3js.org/d3.v3.min.js"></script>
-    <script src="//cdn.rawgit.com/waganse/src_bank/c7e97552/js/d3/liquidFillGauge.js"></script>
-    <style>
-        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
-    </style>
+<head>
+<style>
+.liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+</style>
 </head>
 <body>
-<div class="results" style="text-align: center; margin-bottom: 20px;"><span style="font-size: 20pt;"><span style="color: #ffffff; background-color: #808080; font-size: 12pt;"><br />&nbsp;{Query.Quarter}&nbsp;</span><br />&yen;{Query.売上.}&nbsp;</span><br /><span style="color: #000000;">(目標:</span><span style="font-size: 15pt; color: #000000;">&nbsp;&yen;{Query.月別売上目標金額})&nbsp;</span></div>
-<svg id="fillgauge" width="100%"></svg>
+<div class="results" style="text-align: center; margin-bottom: 20px;">
+    <span style="font-size: 20pt;">
+        <span style="color: #ffffff; background-color: #808080; font-size: 12pt;"><br>&nbsp;<span id="q-text"></span>&nbsp;</span><br>
+        <span style="font-size: 18pt;">&yen;{Query.売上.}&nbsp;</span>
+    </span><br>
+    <span style="font-size: 10pt;">
+        <span style="color: #000000;">(目標:</span>
+        <span style="color: #000000;">&nbsp;&yen;{Query.月別売上目標金額})&nbsp;</span>
+    </span>
+</div>
+<svg id="fillgauge" style="width: 100%;"></svg>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//cdn.rawgit.com/waganse/src_bank/c7e97552/js/d3/liquidFillGauge.js"></script>
 <script>// <![CDATA[
+
+// Quarter text
+var qTxtFull = '{Query.Quarter}';
+var qTxt = qTxtFull.substr(0, 2);
+var yTxt = qTxtFull.substr(2, 5);
+var qMap = {
+    Q1: 'Q2',
+    Q2: 'Q3',
+    Q3: 'Q4',
+    Q4: 'Q1'
+};
+var qEl = document.getElementById('q-text');
+qEl.innerHTML = qMap[qTxt] + yTxt;
+
+// Gauge
 var val = Number({Query.JSON}.rows[0][3]) || 0;
 var dispVal = val.toFixed(1);
 var dispColor = '#669317'; // Green
@@ -36,7 +61,9 @@ var config = liquidFillGaugeDefaultSettings();
     config.textSize = 0.75;
     config.waveCount = 3;
 
-    loadLiquidFillGauge("fillgauge", dispVal, config);
+    setTimeout(function() {
+        loadLiquidFillGauge("fillgauge", dispVal, config);
+    }, 500);
 // ]]></script>
 </body>
 </html>

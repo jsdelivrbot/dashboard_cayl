@@ -33,10 +33,9 @@
     }
     #page #custom-dom-header.active .header .brand-logo {
       top: 0;
-      -webkit-transform: scale(0.2) translateX(0);
-          -ms-transform: scale(0.2) translateX(0);
-              transform: scale(0.2) translateX(0);
-      left: 20px;
+      -webkit-transform: scale(0.2) translate(-50%, -50%);
+          -ms-transform: scale(0.2) translate(-50%, -50%);
+              transform: scale(0.2) translate(-50%, -50%);
     }
     #page #custom-dom-header .header .sprite-logo {
       position: absolute;
