@@ -32,7 +32,6 @@
       transition: all .4s;
     }
     #page #custom-dom-header.active .header .brand-logo {
-      top: 0;
       -webkit-transform: scale(0.2) translate(-50%, -50%);
           -ms-transform: scale(0.2) translate(-50%, -50%);
               transform: scale(0.2) translate(-50%, -50%);
