@@ -11,8 +11,8 @@
 
     $titles.find('.dicon').remove();
 
-    $.each($titles, function() {
-        $this = $(this),
+    $.each($titles, function(item) {
+        $this = $(item),
         title = $.trim($this.find('.title-label').text());
 
         if (title != '') {
