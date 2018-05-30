@@ -12,14 +12,15 @@
     $titles.find('.dicon').remove();
 
     setTimeout(function() {
-        $.each($titles, function(i, item) {
-            var $this = $(item),
+        $.each($titles, function() {
+            var $this = $(this),
                 title = $.trim($this.find('.title-label').text());
 
             if (title != '') {
+                console.log($this);
                 $this.prepend($icon);
             }
         });
-    }, 0)
+    }, 10000)
 
 })();
