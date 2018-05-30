@@ -11,7 +11,7 @@
       }),
       $style01 = $('<link>', {
         rel: 'stylesheet',
-        href: 'https://cdn.rawgit.com/waganse/dashboard_cayl/f4e2dd9/css/reset.css'
+        href: 'https://cdn.rawgit.com/waganse/dashboard_cayl/bcdf06b/css/reset.css'
       });
       // $style02 = $('<link>', {
       //   rel: 'stylesheet',
