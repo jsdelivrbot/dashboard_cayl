@@ -6,8 +6,10 @@
         $titles = $widgets.find('.new-widget-title').find('.left-part'),
         iconClass = window.iconClass && window.iconClass != '' ? window.iconClass : 'dicon-spinner10',
         $icon = $('<i>', {
-        	class: iconClass
+        	class: 'dicon ' + iconClass
         });
+
+    $titles.find('.dicon').remove();
 
     $.each($titles, function() {
         $this = $(this),
@@ -15,7 +17,6 @@
 
         if (title != '') {
 console.log($this, title);
-            $this.find('i').remove();
             $this.prepend($icon);
         }
     });
