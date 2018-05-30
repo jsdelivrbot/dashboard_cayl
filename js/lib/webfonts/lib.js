@@ -9,7 +9,7 @@
         	class: 'dicon ' + iconClass
         });
 
-    $titles.find('.dicon').remove();
+    // $titles.find('.dicon').remove();
 
     $.each($titles, function(i, item) {
         var $this = $(item),
