@@ -9,7 +9,14 @@
         	class: iconClass
         });
 
-    $titles.find('i').remove();
-    $titles.prepend($icon);
+    $.each($titles, function() {
+        $this = $(this),
+        $title = $.trim($this.find('.title-label').txt());
+
+        if ($title != '') {
+            $this.find('i').remove();
+            $this.prepend($icon);
+        }
+    });
 
 })();
