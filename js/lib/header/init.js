@@ -10,7 +10,7 @@
       border-bottom: 2px solid #A99A82;
       -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
           box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-      z-index: 9999;
+      z-index: 9997;
     }
     #page #custom-dom-header.active {
       height: 30px;
