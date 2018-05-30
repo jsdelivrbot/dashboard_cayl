@@ -9,15 +9,17 @@
         	class: 'dicon ' + iconClass
         });
 
-    // $titles.find('.dicon').remove();
+    $titles.find('.dicon').remove();
 
-    $.each($titles, function(i, item) {
-        var $this = $(item),
-            title = $.trim($this.find('.title-label').text());
+    setTimeout(function() {
+        $.each($titles, function(i, item) {
+            var $this = $(item),
+                title = $.trim($this.find('.title-label').text());
 
-        if (title != '') {
-            $this.prepend($icon);
-        }
-    });
+            if (title != '') {
+                $this.prepend($icon);
+            }
+        });
+    }, 0)
 
 })();
