@@ -11,7 +11,7 @@
 
     $.each($titles, function() {
         $this = $(this),
-        $title = $.trim($this.find('.title-label').txt());
+        $title = $.trim($this.find('.title-label').text());
 
         if ($title != '') {
             $this.find('i').remove();
