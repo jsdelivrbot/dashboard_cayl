@@ -33,13 +33,11 @@
     type: 'text/css'
   });
 
-  // Init
-  $parentNode.find('#custom-dom-scrolltop').remove();
-
   // Override styling
   cssText += customCssText;
 
   // Init for custom node
+  $parentNode.find('#custom-dom-scrolltop').remove();
   $parentNode.append($tmpDom);
   $customDom = $parentNode.find('#custom-dom-scrolltop');
 
