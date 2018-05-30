@@ -13,6 +13,7 @@
         $this = $(this),
         $title = $.trim($this.find('.title-label').text());
 
+console.log($this, $title);
         if ($title != '') {
             $this.find('i').remove();
             $this.prepend($icon);
