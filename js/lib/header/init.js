@@ -1,5 +1,8 @@
 (function() {
   var cssText = `
+    #page #content #pageData {
+      padding-top: 20px;
+    }
     #page #custom-dom-header {
       position: fixed;
       top: 50px;
