@@ -11,16 +11,14 @@
 
     $titles.find('.dicon').remove();
 
-    setTimeout(function() {
-        $.each($titles, function() {
-            var $this = $(this),
-                title = $.trim($this.find('.title-label').text());
+    $.each($titles, function() {
+        var $this = $(this),
+            title = $.trim($this.find('.title-label').text());
 
-            if (title != '') {
-                console.log($this);
-                $this.prepend($icon);
-            }
-        });
-    }, 10000)
+        if (title != '') {
+            console.log($this);
+            $this.prepend('<i class="dicon "' + iconClass + '"></i>');
+        }
+    });
 
 })();
