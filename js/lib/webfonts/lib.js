@@ -4,10 +4,7 @@
         $pageNode = $('#pageData', parent.document),
         $widgets = $pageNode.find('.widget-item'),
         $titles = $widgets.find('.new-widget-title').find('.left-part'),
-        iconClass = window.iconClass && window.iconClass != '' ? window.iconClass : 'dicon-spinner10',
-        $icon = $('<i>', {
-        	class: 'dicon ' + iconClass
-        });
+        iconClass = window.iconClass && window.iconClass != '' ? window.iconClass : 'dicon-spinner10';
 
     $titles.find('.dicon').remove();
 
@@ -17,7 +14,7 @@
 
         if (title != '') {
             console.log($this);
-            $this.prepend('<i class="dicon "' + iconClass + '"></i>');
+            $this.prepend('<i class="dicon ' + iconClass + '"></i>');
         }
     });
 
