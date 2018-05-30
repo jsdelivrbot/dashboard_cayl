@@ -11,12 +11,11 @@
 
     $titles.find('.dicon').remove();
 
-    $.each($titles, function() {
-        var $this = $(this),
+    $.each($titles, function(i, item) {
+        var $this = $(item),
             title = $.trim($this.find('.title-label').text());
 
         if (title != '') {
-console.log($this, title);
             $this.prepend($icon);
         }
     });
