@@ -35,7 +35,7 @@
   // Config switcher
   $customNode.append('<div class="custom__config js-config"><i class="dicon-wrench"></i></div>');
   $customNode.find('.js-config').on('click', function() {
-    $pageNode.toggleClass('config');
+    $parentNode.toggleClass('config');
 
     return false;
   });

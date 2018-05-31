@@ -42,6 +42,24 @@
   display: block;
 }
 
+#page #content #pageData.config #custom-dom .custom__config {
+  position: fixed;
+  bottom: 5px;
+  right: -20px;
+  background: #ddd;
+  padding: 10px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: #888;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+#page #content #pageData.config #custom-dom .custom__config i {
+  vertical-align: middle;
+}
+
 @font-face {
   font-family: 'datomara-icon';
   src:  url('https://cdn.rawgit.com/waganse/src_bank/d45fbf0c/fonts/fonts/datomara-icon.eot');
