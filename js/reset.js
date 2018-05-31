@@ -3,7 +3,7 @@
   var cssText = `
   `;
   ///////////////////////////////////////////////////////////
-  var svgPath = 'https://cdn.rawgit.com/waganse/src_bank/50b2df10/svg/cayl/svg-symbols.svg',
+  var svgPath = 'https://cdn.rawgit.com/waganse/src_bank/39dad26/svg/cayl/svg-symbols.svg',
       $parentBody = $('body', parent.document),
       $parentNode = $('#pageData', parent.document),
       $customNode = $('<div>', {
