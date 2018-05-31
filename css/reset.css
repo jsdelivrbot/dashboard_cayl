@@ -5,6 +5,7 @@
     background-repeat: no-repeat, repeat;
     background-position: right 30px bottom 30px, left top;
     background-size: 250px,auto;
+    transition: all .4s;
 }
 
 #page #content #pageData .new-dashboard.grid-wrapper {
@@ -21,21 +22,10 @@
 }
 
 #page #content #pageData .new-dashboard.grid-wrapper .widget-item:first-child {
-    display: none;
 }
 
-#page #content #pageData.config .new-dashboard.grid-wrapper .widget-item:first-child {
-    display: block;
-    width: 30vw;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
-    z-index: 9999;
-    background: #a99a82;
-    border-radius: 10px;
+#page #content #pageData.config {
+  margin-top: 0;
 }
 
 #page #content #pageData #custom-dom .custom__overlay {

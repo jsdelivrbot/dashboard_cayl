@@ -32,6 +32,15 @@
   // Overlay
   $customNode.append('<div class="custom__overlay js-overlay"></div>');
 
+  // Config switcher
+  $customNode.append('<div class="custom__config js-config"><i class="dicon-edit"></i></div>');
+  $customNode.find('.js-config').on('click', function() {
+    $pageNode.toggleClass('config');
+
+    return false;
+  });
+
+
   // CSS insert
   $style01.html(cssText);
   $parentNode.append($style01);
