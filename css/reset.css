@@ -21,7 +21,8 @@
     word-wrap: break-word;
 }
 
-#page #content #pageData .new-dashboard.grid-wrapper .widget-item:first-child {
+#page #content #pageData.config .new-dashboard.grid-wrapper .widget-item:first-child {
+  z-index: 9999;
 }
 
 #page #content #pageData.config {
