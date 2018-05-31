@@ -42,7 +42,7 @@
   display: block;
 }
 
-#page #content #pageData.config #custom-dom .custom__config {
+#page #content #pageData #custom-dom .custom__config {
   position: fixed;
   bottom: 5px;
   right: -20px;
@@ -56,7 +56,7 @@
   cursor: pointer;
 }
 
-#page #content #pageData.config #custom-dom .custom__config i {
+#page #content #pageData #custom-dom .custom__config i {
   vertical-align: middle;
 }
 
