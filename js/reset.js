@@ -33,7 +33,7 @@
   $customNode.append('<div class="custom__overlay js-overlay"></div>');
 
   // Config switcher
-  $customNode.append('<div class="custom__config js-config"><i class="dicon-edit"></i></div>');
+  $customNode.append('<div class="custom__config js-config"><i class="dicon-wrench"></i></div>');
   $customNode.find('.js-config').on('click', function() {
     $pageNode.toggleClass('config');
 
