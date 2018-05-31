@@ -1,9 +1,7 @@
 # Beautiful Dashboard project by Yossy
 
-## Items
-[Demo site](https://platform.datorama.com/25936/visualize/106989)
-
-### Reset Styling
+### Initialize
+* `css/reset.css`
 * `js/reset.js`
 For consistent UI styling (e.g. Global Header, background image, logo, etc..)
 
