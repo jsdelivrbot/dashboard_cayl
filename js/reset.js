@@ -10,7 +10,7 @@
       }),
       $style = $('<link>', {
         rel: 'stylesheet',
-        href: 'https://cdn.rawgit.com/waganse/dashboard_cayl/dc70a9f/css/reset.css'
+        href: 'https://cdn.rawgit.com/waganse/dashboard_cayl/e80a082/css/reset.css'
       });
 
   // Init
