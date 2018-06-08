@@ -1,8 +1,6 @@
 #page #content #pageData {
     padding: 0;
-    margin-top: -55px;
     background: url(https://cdn.rawgit.com/waganse/dashboard_cayl/834a71a/img/bg_2.png);
-    transition: all .4s;
 }
 
 #page #content #pageData .new-dashboard.grid-wrapper {
@@ -16,46 +14,6 @@
 #page #content #pageData .new-dashboard.grid-wrapper .widget-item .new-widget .title-label {
     white-space: normal;
     word-wrap: break-word;
-}
-
-#page #content #pageData.config .new-dashboard.grid-wrapper .widget-item:first-child {
-  z-index: 9999;
-}
-
-#page #content #pageData.config {
-  margin-top: 0;
-}
-
-#page #content #pageData #custom-dom .custom__overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgb(30, 30, 30, 0.2);
-  z-index: 9998;
-}
-#page #content #pageData.config #custom-dom .custom__overlay {
-  display: block;
-}
-
-#page #content #pageData #custom-dom .custom__config {
-  position: fixed;
-  bottom: 5px;
-  right: -20px;
-  background: #ddd;
-  padding: 10px;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  color: #888;
-  z-index: 99999;
-  cursor: pointer;
-}
-
-#page #content #pageData #custom-dom .custom__config i {
-  vertical-align: middle;
 }
 
 @font-face {
