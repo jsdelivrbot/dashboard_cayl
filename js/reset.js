@@ -2,9 +2,9 @@
 
   var cssText = `
   `;
-  ///////////////////////////////////////////////////////////
-  var $parentBody = $('body', parent.document),
-      $parentNode = $('#pageData', parent.document),
+
+  var newUIFlag = ($('#pageData', parent.document).length)? false : true,
+      $parentNode = (newUIFlag)? $('.grid-tab', parent.document) : $('#pageData', parent.document),
       $customNode = $('<div>', {
         id: 'custom-dom'
       }),
@@ -14,7 +14,7 @@
       });
 
   // Init
-  $parentBody.find('#custom-dom').remove();
+  $parentNode.find('#custom-dom').remove();
 
   // Custom DOM
   $parentNode.append($customNode);

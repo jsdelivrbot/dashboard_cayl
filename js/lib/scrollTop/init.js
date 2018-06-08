@@ -22,19 +22,16 @@
       transform: translateY(0);
     }
   `,
-  customCssText = window.css || '',
-  $parentNode = $('#pageData', parent.document),
+  newUIFlag = ($('#pageData', parent.document).length)? false : true,
+  $parentNode = (newUIFlag)? $('.grid-tab', parent.document) : $('#pageData', parent.document),
   $tmpDom = $('<div>', {
     id: 'custom-dom-scrolltop',
     class: 'custom-dom'
   }),
   $cutomDom,
-  $style01 = $('<style>', {
+  $style = $('<style>', {
     type: 'text/css'
   });
-
-  // Override styling
-  cssText += customCssText;
 
   // Init for custom node
   $parentNode.find('#custom-dom-scrolltop').remove();
@@ -42,7 +39,7 @@
   $customDom = $parentNode.find('#custom-dom-scrolltop');
 
   // CSS insert
-  $style01.html(cssText);
-  $customDom.append($style01);
+  $style.html(cssText);
+  $customDom.append($style);
 
 })();

@@ -1,11 +1,12 @@
 (function() {
 
     var $parent = $(parent.document),
-        $pageNode = $('#pageData', parent.document),
-        $customNode = $pageNode.find('#custom-dom-scrolltop');
+        newUIFlag = ($('#pageData', parent.document).length)? false : true,
+        $parentNode = (newUIFlag)? $('.grid-tab', parent.document) : $('#pageData', parent.document),
+        $customNode = $parentNode.find('#custom-dom-scrolltop');
 
-    $pageNode.on('scroll', function() {
-        var y = $pageNode.scrollTop(),
+    $parentNode.on('scroll', function() {
+        var y = $parentNode.scrollTop(),
             wy = $parent.height() / 3;
 
         if (y > wy) {
@@ -16,7 +17,7 @@
     });
 
     $customNode.on('click', function() {
-        $pageNode.animate({
+        $parentNode.animate({
             scrollTop: 0
         });
     });
