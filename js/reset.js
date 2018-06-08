@@ -20,7 +20,7 @@
   $parentNode.append($customNode);
 
   // CSS insert
-  $style01.html(cssText);
+  $style.html(cssText);
   $parentNode.append($style);
 
 })();
